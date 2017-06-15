@@ -1,0 +1,14 @@
+<p-growl [value]="msgs"></p-growl>
+<p-panel header="Bitte geben Sie ihre Benutzerdaten ein:">
+    <div>
+        <div class="height50"></div>
+        <div>Emailadresse:<br>
+            <input id="in" type="text" size="30" pInputText [(ngModel)]="email" />
+        </div>
+        <div>Kennwort:<br>
+            <input id="in" type="password" size="30" pInputText [(ngModel)]="passw" />
+            <button type="button" (click)="login()" icon="fa-sign-out" pButton label="Login"></button>
+        </div>
+    </div>
+    <div class="height50"></div>
+</p-panel>

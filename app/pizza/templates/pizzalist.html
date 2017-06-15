@@ -1,0 +1,19 @@
+<p-dataGrid [value]="getPizzaList()" [paginator]="true" [rows]="9">
+  <ng-template let-pizza pTemplate=”item”>
+    <div class="padding-3, ui-g-12 ui-md-4">
+      <p-panel [header]="pizza.name" [style]="{'text-align':'center'}">
+        <div class="storeWindowLarge">
+          <div id="whiteBox">
+            <div id="box">
+              <small>{{pizza.size}}</small>
+              <br><b>{{pizza.price}} Euro</b>
+            </div>
+          </div>
+          <img class="cursor_hand" src="../app/images/pizza/{{pizza.image}}" (click)="showDetails(pizza)">
+          <div> {{pizza.price}} Euro</div>
+          <hr class="ui-widget-content border-top-0">
+        </div>
+      </p-panel>
+    </div>
+  </ng-template>
+</p-dataGrid>

@@ -1,0 +1,9 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var pizzalist_component_1 = require("../components/pizzalist.component");
+var pizzadetail_component_1 = require("../components/pizzadetail.component");
+exports.PizzaRoutes = [
+    { path: '', component: pizzalist_component_1.PizzaListComponent },
+    { path: 'pizzadetail/:id', component: pizzadetail_component_1.PizzaDetailComponent }
+];
+//# sourceMappingURL=pizza.routes.js.map

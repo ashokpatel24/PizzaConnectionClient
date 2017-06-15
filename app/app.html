@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Pizza-Connection</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+            <div class="height350"></div>
+            <div class="container-fixed">
+                <div id="mLeft">
+                    <p-menubar [model]="items" [style]="{'width':'680px'}"></p-menubar>
+                </div>
+                <ng-template [ngIf]="isLoggedIn()">
+                    <div id="mRight">
+                        <button id="button" type="button" (click)="logout()" icon="fa-sign-out" pButton label="Logout"></button>
+                    </div>
+                </ng-template>
+                <ng-template [ngIf]="!isLoggedIn()">
+                    <div id="mRight">
+                        <button id="button" type="button" (click)="login()" icon="fa-sign-out" pButton label="Login"></button>
+                    </div>
+                </ng-template>
+            </div>
+            <div class="height50"></div>
+            <div class="container-fixed">
+                <div><router-outlet></router-outlet></div>
+            </div>
+        </div>
+    </body>
+</html>

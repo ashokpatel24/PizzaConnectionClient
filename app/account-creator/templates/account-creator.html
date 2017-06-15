@@ -1,0 +1,49 @@
+<p-growl [value]="msgs"></p-growl>
+<p-panel header="Bitte geben Sie die folgenden Daten an:">
+    <div>
+        <div class="height25"></div>
+        <table class="width-80-prt">
+            <tr>
+                <td>Anrede</td>
+                <td><p-dropdown [options]="salutations" [(ngModel)]="account.salutation"></p-dropdown></td>
+                <td></td>
+                <td></td>
+            </tr><tr>
+                 <td>Vorname</td>
+                <td><input type="text" pInputText [(ngModel)]="account.firstName"/></td>
+                <td>Nachname</td>
+                <td><input type="text" pInputText [(ngModel)]="account.lastName"/></td>
+            </tr><tr>
+                <td>Straße</td>
+                <td colspan="3"><input type="text" pInputText [(ngModel)]="account.streetName"/></td>
+            </tr><tr>
+                <td>PLZ</td>
+                <td><input type="text" pInputText [(ngModel)]="account.zipCode"/></td>
+                <td>Ort</td>
+                <td><input type="text" pInputText [(ngModel)]="account.cityName"/></td>
+            </tr><tr>
+                <td colspan="4" class="height30"></td>
+            </tr>
+            <ng-template [ngIf]="createNewAccount">
+                <tr>
+                    <td>Benutzername</td>
+                    <td><input type="text" pInputText [(ngModel)]="account.userName"/></td>
+                    <td>Passwort</td>
+                    <td><input type="password" pInputText [(ngModel)]="account.password"/></td>
+                </tr>
+            </ng-template>
+            <tr>
+                <td colspan="4" class="height30"></td>
+            </tr><tr>
+                <td colspan="4" class="rightAligned">
+                    <ng-template [ngIf]="createNewAccount">
+                        <button type="button" (click)="createAccount()" icon="fa-check" pButton label="Kundenkonto erstellen"></button>
+                    </ng-template>
+                    <ng-template [ngIf]="!createNewAccount">
+                        <button type="button" (click)="orderDirect()" icon="fa-check" pButton label="Weiter"></button>
+                    </ng-template>
+                </td>
+            </tr>
+        </table>
+    </div>
+</p-panel>

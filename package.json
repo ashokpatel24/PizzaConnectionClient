@@ -1,0 +1,42 @@
+{
+  "name": "pizzaconnection",
+  "version": "4.1.0",
+  "scripts": {
+    "start": "tsc && concurrently \"npm run tsc:w\" \"npm run lite\" ",
+    "lite": "lite-server",
+    "postinstall": "typings install",
+    "tsc": "tsc",
+    "tsc:w": "tsc -w",
+    "typings": "typings"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@angular/common": "4.1.0",
+    "@angular/compiler": "4.1.0",
+    "@angular/forms": "4.1.0",
+    "@angular/core": "4.1.0",
+    "@angular/platform-browser": "4.1.0",
+    "@angular/platform-browser-dynamic": "4.1.0",
+    "@angular/router": "4.1.0",
+    "@angular/upgrade": "4.1.0",
+    "@angular/http": "4.1.0",
+    "@angular/animations": "4.1.0", 
+    "font-awesome": "4.7.0",
+    "angular2-localstorage": "0.4.0",
+    "bootstrap": "3.3.7",
+    "core-js": "2.4.1",
+    "es6-shim": "0.35.3",    
+    "primeng": "4.0.0",
+    "primeui": "4.1.15",
+    "reflect-metadata": "0.1.10",
+    "rxjs": "5.3.1",
+    "systemjs": "0.20.12",
+    "zone.js": "0.8.4"    
+  },
+  "devDependencies": {
+    "concurrently": "3.4.0",
+    "lite-server": "2.3.0",
+    "typescript": "2.3.2",
+    "typings":"2.1.1"
+  }
+}
