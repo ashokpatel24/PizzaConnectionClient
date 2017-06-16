@@ -1,3 +1,6 @@
+import { Injectable } from '@angular/core';
+
+@Injectable()
 export class Account {
     _id:number;
     _salutation:string;
